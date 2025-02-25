@@ -38,5 +38,21 @@ public class Main {
         System.out.println("Obtendo o valor na posição 3: " + lista.obterElemento(2));
         System.out.println("Obtendo o valor na posição 5 (não existe): " + lista.obterElemento(5));
 
+        // fix > create Test cases
+        @Test
+        public void testarObterElemento() {
+           lista.inserir(5);
+           lista.inserir(10);
+           lista.inserir(15);
+            
+            try {
+               lista.obterElemento(5);
+               fail();
+            } catch (IndexOutOfBoundsException e){
+                // passou o teste, já que ao obter um elemento que não existe
+                // retornou erro
+            };
+        }
+
     }
 }
