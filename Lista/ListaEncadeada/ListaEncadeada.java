@@ -35,8 +35,8 @@ public class ListaEncadeada<T> {
   public void retirar(T valor){
     NoLista<T> anterior = null;
     NoLista<T> p = primeiro;
-
-    while (p != null && p.getInfo() != valor) {
+    // using equals to because == compares if the object is the same and no the same value
+    while (p != null && (!p.getInfo().equals(valor))) {
       anterior = p;
       p = p.getProximo();
     }
