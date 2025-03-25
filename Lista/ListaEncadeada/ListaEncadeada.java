@@ -67,9 +67,9 @@ public class ListaEncadeada<T> {
 
   public NoLista<T> obterNo(int index){
     int comprimento = obterComprimento();
-    if (index < 0 || index >= comprimento) {
+    if (index < 0 || index > comprimento-1) {
       throw new IndexOutOfBoundsException("Posição inválida");
-    }
+    };
 
     NoLista<T> p = this.primeiro;
     int contador = 0;
@@ -95,11 +95,12 @@ public class ListaEncadeada<T> {
       p = p.getProximo();
     };
 
-    if p == null {
+    if( p == null) {
       throw new IndexOutOfBoundsException("Posição inválida");
     };
 
     return p;
+  }
   
   public String toString(){
     if (primeiro == null) return "";
