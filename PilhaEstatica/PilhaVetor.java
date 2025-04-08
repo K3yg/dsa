@@ -1,4 +1,4 @@
-package Pilha;
+package PilhaEstatica;
 
 public class PilhaVetor<T> implements Pilha<T> {
   private T[]info;
