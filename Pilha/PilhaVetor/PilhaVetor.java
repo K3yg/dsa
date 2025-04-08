@@ -1,4 +1,8 @@
-package PilhaEstatica;
+package Pilha.PilhaVetor;
+
+import Pilha.Pilha;
+import Pilha.PilhaCheiaException;
+import Pilha.PilhaVaziaException;
 
 public class PilhaVetor<T> implements Pilha<T> {
   private T[]info;

@@ -1,4 +1,4 @@
-package PilhaEstatica;
+package Pilha;
 
 public interface Pilha<T> {
   public void push(T info);
