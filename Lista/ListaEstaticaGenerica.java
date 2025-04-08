@@ -9,6 +9,20 @@ public class ListaEstaticaGenerica<T> {
       this.info = (T[]) new Object[10];
   }
 
+  public void inserir2(int posicao, T valor) {
+    if (posicao < 0 || posicao > this.tamanho) {
+        throw new IndexOutOfBoundsException("Posição inválida");
+    }
+    if (this.tamanho == this.info.length) {
+        redimensionar();
+    }
+    for (int i = this.tamanho; i > posicao; i--) {
+        this.info[i] = this.info[i - 1];
+    }
+    this.info[posicao] = valor;
+    this.tamanho++;
+}
+
   public int getTamanho() {
       return tamanho;
   }
