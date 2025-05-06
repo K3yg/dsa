@@ -35,9 +35,13 @@ public class PilhaLista<T> implements Pilha<T> {
   }
 
   public void liberar(){
+    while (!lista.estaVazia()) {
+      this.pop();
+    }
   }
-
+  
   public String toString() {
     return lista.toString();
   }
+
 }

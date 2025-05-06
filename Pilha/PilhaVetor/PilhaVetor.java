@@ -66,7 +66,7 @@ public class PilhaVetor<T> implements Pilha<T> {
 
   public void concatenar(PilhaVetor<T> p) {
     int tamanhoTotal = this.tamanho + p.tamanho;
-    if (tamanhoTotal < this.limite) {
+    if (tamanhoTotal > this.limite) {
       throw new PilhaCheiaException();
     }
     for(int i = 0; i < p.tamanho; i++) {
